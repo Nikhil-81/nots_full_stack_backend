@@ -10,6 +10,11 @@ app.use(express.json())
 app.use(cors())
 app.use("/user",UserRout)
 app.use("/note",Notes_route)
+
+app.get("/",(req,res)=>{
+    req.send("HEllo")
+})
+
 app.listen(PORT,async()=>{
     try{
         await CONNECT
